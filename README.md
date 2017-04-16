@@ -19,12 +19,25 @@ const resolver = (resolve, reject) => {
   setTimeout(()=>{
     resolve('foo');
   }, 1000);
-}
+};
 
+// Alias for new Promise
 prs(resolver).then((val)=>{
   console.log(val);
   // => foo
 });
+
+// Alias for Promise.resolve
+prs.resolve()
+	.then()...
+// or
+prs.res()
+	.then()...
+
+
+// Alias for Promise.all
+prs.all([prs,prs...])
+
 ```
 
 
