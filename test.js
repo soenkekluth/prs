@@ -1,5 +1,6 @@
 import test from 'ava';
 import prs from './index';
+import now from 'performance-now';
 
 const resolver = (resolve, reject) => {
   setTimeout(() => {
@@ -8,8 +9,11 @@ const resolver = (resolve, reject) => {
 }
 
 test('prs(resolver) resolves after 100ms', async t => {
+	const start = now();
   const value = await prs(resolver);
+	const duration = now() - start;
   t.is(value, 'check');
+  t.truthy(duration >= 100 && duration <= 120);
 });
 
 test('prs.resolve (static)', async t => {

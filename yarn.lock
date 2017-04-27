@@ -898,6 +898,10 @@ diff-match-patch@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/diff-match-patch/-/diff-match-patch-1.0.0.tgz#1cc3c83a490d67f95d91e39f6ad1f2e086b63048"
 
+diff@^2.2.1:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-2.2.3.tgz#60eafd0d28ee906e4e8ff0a52c1229521033bf99"
+
 diff@^3.0.0, diff@^3.0.1:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.2.0.tgz#c9ce393a4b7cbd0b058a725c93df299027868ff9"
@@ -911,6 +915,10 @@ dot-prop@^4.1.0:
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
+
+duplexer@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
 ecc-jsbn@~0.1.1:
   version "0.1.1"
@@ -970,6 +978,10 @@ esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
+events-to-array@^1.0.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/events-to-array/-/events-to-array-1.1.2.tgz#2d41f563e1fe400ed4962fe1a4d5c6a7539df7f6"
+
 execa@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-0.4.0.tgz#4eb6467a36a095fabb2970ff9d5e3fb7bce6ebc3"
@@ -1018,6 +1030,13 @@ extglob@^0.3.1:
 extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
+
+figures@^1.4.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-1.7.0.tgz#cbe1e3affcf1cd44b80cadfed28dc793a9701d2e"
+  dependencies:
+    escape-string-regexp "^1.0.5"
+    object-assign "^4.1.0"
 
 figures@^2.0.0:
   version "2.0.0"
@@ -1567,7 +1586,7 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@^3.8.2:
+js-yaml@^3.2.7, js-yaml@^3.8.2:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.3.tgz#33a05ec481c850c8875929166fe1beb61c728766"
   dependencies:
@@ -2060,6 +2079,10 @@ path-type@^2.0.0:
   dependencies:
     pify "^2.0.0"
 
+performance-now@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -2131,7 +2154,7 @@ pretty-ms@^0.2.1:
   dependencies:
     parse-ms "^0.1.0"
 
-pretty-ms@^2.0.0:
+pretty-ms@^2.0.0, pretty-ms@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/pretty-ms/-/pretty-ms-2.1.0.tgz#4257c256df3fb0b451d6affaab021884126981dc"
   dependencies:
@@ -2205,7 +2228,7 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-"readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2, readable-stream@^2.1.4, readable-stream@^2.1.5:
+readable-stream@^2, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2, readable-stream@^2.1.4, readable-stream@^2.1.5:
   version "2.2.9"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.9.tgz#cf78ec6f4a6d1eb43d26488cac97f042e74b7fc8"
   dependencies:
@@ -2535,6 +2558,28 @@ symbol-observable@^0.2.2:
 symbol-observable@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
+tap-diff@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/tap-diff/-/tap-diff-0.1.1.tgz#8fbf3333d85643feea1bf1759b90820b04a37ddf"
+  dependencies:
+    chalk "^1.1.1"
+    diff "^2.2.1"
+    duplexer "^0.1.1"
+    figures "^1.4.0"
+    pretty-ms "^2.1.0"
+    tap-parser "^1.2.2"
+    through2 "^2.0.0"
+
+tap-parser@^1.2.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/tap-parser/-/tap-parser-1.3.2.tgz#120c5089c88c3c8a793ef288867de321e18f8c22"
+  dependencies:
+    events-to-array "^1.0.1"
+    inherits "~2.0.1"
+    js-yaml "^3.2.7"
+  optionalDependencies:
+    readable-stream "^2"
 
 tar-pack@^3.4.0:
   version "3.4.0"
