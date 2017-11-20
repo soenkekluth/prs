@@ -2,6 +2,8 @@
 
 # prs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/soenkekluth/prs.svg)](https://greenkeeper.io/)
+
 alias for `new Promise`
 
 ## Install
