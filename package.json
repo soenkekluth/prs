@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/soenkekluth/prs#readme",
   "devDependencies": {
-    "ava": "0.19.1",
+    "ava": "0.23.0",
     "performance-now": "2.1.0",
     "tap-diff": "0.1.1"
   }
