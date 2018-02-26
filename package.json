@@ -1,17 +1,31 @@
 {
   "name": "prs",
-  "version": "3.1.0",
-  "description": "alias for `new Promise`",
-  "main": "index.js",
+  "version": "3.2.0",
+  "description": "alias for `new Promise` plus useful features like compose",
+  "umd:main": "dist/prs.umd.js",
+  "module": "dist/prs.es.js",
+  "main": "dist/prs.js",
   "scripts": {
     "test": "ava -v",
-    "prepublish": "ava -v"
+    "prepublish": "ava -v",
+    "lint": "eslint index.js",
+    "lint:fix": "yarn lint --fix",
+    "build": "microbundle build index.js",
+    "docs": "documentation readme index.js --section API -q"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soenkekluth/prs.git"
   },
-  "keywords": [],
+  "keywords": [
+    "Promise",
+    "short-hand",
+    "promisify",
+    "async",
+    "await",
+    "compose",
+    "polyfill"
+  ],
   "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
   "license": "MIT",
   "bugs": {
@@ -19,8 +33,19 @@
   },
   "homepage": "https://github.com/soenkekluth/prs#readme",
   "devDependencies": {
-    "ava": "0.19.1",
+    "ava": "0.25.0",
+    "babel-eslint": "8.2.2",
+    "documentation": "^5.4.0",
+    "eslint": "4.18.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-sk": "0.1.8",
+    "eslint-plugin-prettier": "2.6.0",
+    "microbundle": "^0.4.4",
     "performance-now": "2.1.0",
+    "prettier": "1.10.2",
     "tap-diff": "0.1.1"
+  },
+  "dependencies": {
+    "lodash.flowright": "^3.5.0"
   }
 }

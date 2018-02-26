@@ -1,0 +1,2 @@
+var e=require("lodash.flowright"),r=function(e){return new Promise(e)},o=function(r){return e(Promise.resolve.bind(Promise),r)},s=Promise.resolve.bind(Promise),i=Promise.reject.bind(Promise),n=Promise.all.bind(Promise);r.all=n,r.resolve=s,r.res=s,r.reject=i,r.rej=i,r.compose=o;export default r;export{o as compose,s as resolve,i as reject,n as all,s as res,i as rej};
+//# sourceMappingURL=prs.es.js.map

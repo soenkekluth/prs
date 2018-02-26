@@ -1,0 +1,2 @@
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?module.exports=o():"function"==typeof define&&define.amd?define(o):e.prs=o()}(this,function(){var e=require("lodash.flowright"),o=function(e){return new Promise(e)},r=Promise.resolve.bind(Promise),i=Promise.reject.bind(Promise),n=Promise.all.bind(Promise);return o.all=n,o.resolve=r,o.res=r,o.reject=i,o.rej=i,o.compose=function(o){return e(Promise.resolve.bind(Promise),o)},o});
+//# sourceMappingURL=prs.umd.js.map
