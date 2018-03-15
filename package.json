@@ -1,31 +1,35 @@
 {
   "name": "prs",
-  "version": "3.2.0",
+  "version": "3.5.0",
   "description": "alias for `new Promise` plus useful features like compose",
-  "umd:main": "dist/prs.umd.js",
-  "module": "dist/prs.es.js",
-  "main": "dist/prs.js",
+  "umd:main": "lib/prs.umd.js",
+  "module": "lib/prs.es.js",
+  "main": "lib/prs.js",
   "scripts": {
     "test": "ava -v",
-    "prepublish": "ava -v",
-    "lint": "eslint index.js",
+    "-prepublish": "ava -v",
+    "lint":
+      "eslint './src/**/*.js' --parser-options=ecmaVersion:7 --format=html -o 'lint-result.html' --cache --cache-location '/tmp/.eslintcache/'",
+    "gh-pages": "gh-pages -d ./docs",
+    "size": "echo \"Gzipped Size: $(strip-json-comments lib/prs.js | gzip-size)\"",
     "lint:fix": "yarn lint --fix",
-    "build": "microbundle build index.js",
-    "docs": "documentation readme index.js --section API -q"
+    "cleanup": "rm -rf lib",
+    "build:umd": "microbundle build src/index.js -f umd",
+    "build:lib": "rollup -c ./config/rollup.config.js",
+    "uglify": "uglifyjs lib/prs.umd.js --config-file ./config/uglify.json -o lib/prs.min.js",
+    "build": "run-s cleanup build:lib build:umd uglify size docs",
+    "watch": "rollup -cwm",
+    "docs": "documentation readme ./src/index.js --section API -q"
+  },
+  "engines": {
+    "node": ">=9.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soenkekluth/prs.git"
   },
-  "keywords": [
-    "Promise",
-    "short-hand",
-    "promisify",
-    "async",
-    "await",
-    "compose",
-    "polyfill"
-  ],
+  "files": ["lib"],
+  "keywords": ["Promise", "short-hand", "promisify", "async", "await", "compose", "polyfill"],
   "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
   "license": "MIT",
   "bugs": {
@@ -35,17 +39,26 @@
   "devDependencies": {
     "ava": "0.25.0",
     "babel-eslint": "8.2.2",
-    "documentation": "^5.4.0",
-    "eslint": "4.18.1",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-config-sk": "0.1.8",
-    "eslint-plugin-prettier": "2.6.0",
+    "bundlesize": "^0.16.0",
+    "documentation": "^6.1.0",
+    "eslint": "4.18.2",
+    "eslint-config-sk-browser": "^0.5.7",
+    "gzip-size-cli": "^2.1.0",
     "microbundle": "^0.4.4",
+    "npm-run-all": "^4.1.2",
     "performance-now": "2.1.0",
-    "prettier": "1.10.2",
-    "tap-diff": "0.1.1"
+    "prettier": "1.11.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.57.0",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.2.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "tap-diff": "0.1.1",
+    "uglify-js": "^3.3.15"
   },
   "dependencies": {
-    "lodash.flowright": "^3.5.0"
+    "lodash.flowright": "^3.5.0",
+    "promise-polyfill": "^7.1.0"
   }
 }

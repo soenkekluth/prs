@@ -1,0 +1,11 @@
+**/dist/*
+**/.*/*
+**/test/fixtures/**
+**/test/**/actual.js
+**/test/**/expected.js
+**/locale/*
+**/lib/*
+**/examples/*
+**/node_modules/*
+**/flow-typed/*
+**/.tmp/*

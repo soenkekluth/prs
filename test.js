@@ -1,5 +1,5 @@
 import test from 'ava';
-import prs from './dist/prs';
+import prs from './lib/prs';
 import now from 'performance-now';
 
 const resolver = async resolve => {

@@ -1,0 +1,10 @@
+bundlesize
+gzip-size-cli
+npm-run-all
+rimraf
+rollup
+rollup-plugin-buble
+rollup-plugin-commonjs
+rollup-plugin-node-resolve
+rollup-plugin-replace
+uglify-js
